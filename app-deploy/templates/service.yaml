@@ -1,0 +1,18 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: httpd-service
+spec:
+  selector:
+    app: httpd
+  ports:
+  - protocol: TCP
+    targetPort: 80
+    port: 80
+    name: http
+  - protocol: TCP
+    targetPort: 22
+    port: 22
+    name: ssh
+  type: LoadBalancer

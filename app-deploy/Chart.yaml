@@ -1,0 +1,6 @@
+name: danApp
+version: 1.0.0
+description: First Helm Chart
+maintainers:
+  - name: Daniel Corum
+  - email: danieljcorum@gmail.com
