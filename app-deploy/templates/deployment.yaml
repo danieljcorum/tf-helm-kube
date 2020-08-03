@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: httpd-deployment
 spec:
-  replicas: 5
+  replicas: {{ .Values.scale }}
   selector:
     matchLabels:
       app: httpd
@@ -19,5 +19,7 @@ spec:
         ports:
         - containerPort: 80
           name: http
+        - containerPort: 443
+          name: https
         - containerPort: 22
           name: ssh

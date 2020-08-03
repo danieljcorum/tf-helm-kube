@@ -12,6 +12,10 @@ spec:
     port: 80
     name: http
   - protocol: TCP
+    port: 443
+    targetPort: 443
+    name: https
+  - protocol: TCP
     targetPort: 22
     port: 22
     name: ssh
